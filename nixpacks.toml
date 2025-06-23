@@ -10,6 +10,12 @@ dependencies = [
     "psycopg2"
 ]
 
+[phases.install]
+cmds = [
+    "python3 -m pip install -U Red-DiscordBot",
+]
+
+
 [phases.build]
 cmds = [
     "redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data",
