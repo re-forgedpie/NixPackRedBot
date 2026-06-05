@@ -4,10 +4,9 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 dependencies = [
-    "Red-DiscordBot",
-    "aiohttp",
-    "discord.py",
-    "psycopg2"
+    "pip",
+    "wheel",
+    "Red-DiscordBot"
 ]
 
 [phases.install]
