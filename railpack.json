@@ -3,10 +3,11 @@
   "steps": {
     "build": {
       "inputs": [{ "step": "install" }],
-      "commands": ["redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data", , "redbot-setup --help"]
+      "commands": ["redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data", "redbot-setup --help"],
+      "path": "/var/lib/Red-DiscordBot/data"
     }
   },
   "deploy": {
-    "startCommand": "redbot --list-instances"
+    "startCommand": "redbot mydiscordbot --no-prompt --token $DISCORD_TOKEN -p $DISCORD_PREFIX $ADDITIONAL_LAUNCH_ARGS"
   }
 }
