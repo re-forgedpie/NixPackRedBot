@@ -1,6 +1,18 @@
 {
   "$schema": "https://schema.railpack.com",
+  "build": {
+    "steps": [
+      {
+        "type": "install",
+        "commands": [
+          "python -m venv /app/.venv",
+          "pip install -r requirements.txt"
+        ]
+      }
+    ]
+  },
   "deploy": {
-    "startCommand": "redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data && redbot mydiscordbot --no-prompt --token $DISCORD_TOKEN -p $DISCORD_PREFIX $ADDITIONAL_LAUNCH_ARGS"
+    "preDeployCommand": "redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data && redbot-setup --help",
+    "startCommand": "redbot mydiscordbot --no-prompt --token $DISCORD_TOKEN -p $DISCORD_PREFIX $ADDITIONAL_LAUNCH_ARGS"
   }
 }
