@@ -1,0 +1,5 @@
+[build]
+buildCommand = "redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data"
+
+[deploy]
+startCommand = "python3 -m redbot mydiscordbot --no-prompt --token $DISCORD_TOKEN -p $DISCORD_PREFIX $ADDITIONAL_LAUNCH_ARGS"
