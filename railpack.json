@@ -1,9 +1,8 @@
 {
   "$schema": "https://schema.railpack.com",
   "steps": {
-    "build": {
-      "inputs": [{ "step": "install" }],
-      "commands": ["redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data"]
+    "install": {
+      "commands": ["redbot-setup --no-prompt --instance-name mydiscordbot --backend json --data-path /var/lib/Red-DiscordBot/data", "redbot-setup --help"]
     }
   },
   "deploy": {
